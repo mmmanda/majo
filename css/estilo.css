@@ -12,6 +12,8 @@
   --pancho: #e08a1e;
   --maker: #d0476a;
   --colectucus: #f4a318;
+  --logo-azul: #13b4f5;
+  --logo-gris: #4b5059;
   --sombra: 0 6px 24px rgba(30, 20, 60, .08);
   --radio: 18px;
   color-scheme: light;
@@ -26,6 +28,7 @@
     --acento: #9b7bff;
     --acento-2: #4fd1bd;
     --joshua: #8d8d8d;
+    --logo-gris: #a3a9b3;
     --sombra: 0 6px 24px rgba(0, 0, 0, .35);
     color-scheme: dark;
   }
@@ -56,7 +59,13 @@ p { margin: 0 0 1em; }
 }
 .barra .dentro { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 16px; max-width: 1100px; margin: 0 auto; }
 .marca { display: flex; align-items: center; gap: 10px; font: 700 1.15rem "Fredoka", sans-serif; color: var(--texto); text-decoration: none; }
-.logo { width: 34px; height: 34px; flex: none; }
+.logo { width: 36px; height: 36px; flex: none; }
+.marca .nombre { font-family: "Montserrat", "Nunito", sans-serif; font-weight: 600; color: var(--logo-gris); letter-spacing: -.2px; }
+.marca .nombre b, .logo-completo b { color: var(--logo-azul); font-weight: 700; }
+.logo-completo { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 22px 16px; background: var(--fondo); }
+.infobox .logo-completo img, .logo-completo img { width: 84px; height: auto; flex: none; }
+.logo-completo span { font: 600 26px/1.05 "Montserrat", "Nunito", sans-serif; color: var(--logo-gris); }
+.logo-completo b { font-size: 34px; }
 .barra nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
 .barra nav a { color: var(--suave); text-decoration: none; padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: .95rem; }
 .barra nav a:hover, .barra nav a[aria-current] { background: var(--fondo-2); color: var(--texto); }
