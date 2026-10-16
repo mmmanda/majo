@@ -1,0 +1,159 @@
+/* MaJo Associations — estilo compartido */
+:root {
+  --fondo: #f6f4ef;
+  --fondo-2: #ffffff;
+  --texto: #1d1b26;
+  --suave: #5d5a6b;
+  --borde: #e2ddd3;
+  --acento: #6a3df0;
+  --acento-2: #2fb4a0;
+  --chulin: #0098ff;
+  --joshua: #2b2b2b;
+  --pancho: #e08a1e;
+  --maker: #d0476a;
+  --colectucus: #f4a318;
+  --sombra: 0 6px 24px rgba(30, 20, 60, .08);
+  --radio: 18px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #13121a;
+    --fondo-2: #1d1b27;
+    --texto: #eeeaf7;
+    --suave: #a7a2b8;
+    --borde: #2e2b3c;
+    --acento: #9b7bff;
+    --acento-2: #4fd1bd;
+    --joshua: #8d8d8d;
+    --sombra: 0 6px 24px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 17px/1.6 "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--acento); }
+h1, h2, h3, h4 { font-family: "Fredoka", "Nunito", system-ui, sans-serif; line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 6vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin-top: 1.6em; }
+h3 { font-size: 1.25rem; margin-top: 1.4em; }
+p { margin: 0 0 1em; }
+
+/* ---- Barra superior ---- */
+.barra {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--fondo) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+}
+.barra .dentro { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 16px; max-width: 1100px; margin: 0 auto; }
+.marca { display: flex; align-items: center; gap: 10px; font: 700 1.15rem "Fredoka", sans-serif; color: var(--texto); text-decoration: none; }
+.logo { width: 34px; height: 34px; flex: none; }
+.barra nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+.barra nav a { color: var(--suave); text-decoration: none; padding: 6px 10px; border-radius: 999px; font-weight: 600; font-size: .95rem; }
+.barra nav a:hover, .barra nav a[aria-current] { background: var(--fondo-2); color: var(--texto); }
+
+/* ---- Contenido ---- */
+.contenedor { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.estrecho { max-width: 780px; margin: 0 auto; padding: 0 16px; }
+section { padding: 32px 0; }
+
+.portada { padding: 56px 0 24px; text-align: center; }
+.portada p.lema { font-size: 1.2rem; color: var(--suave); max-width: 640px; margin: 0 auto 1.5em; }
+.bolas { display: flex; justify-content: center; gap: 10px; margin-bottom: 18px; }
+.bola { width: 46px; height: 46px; border-radius: 50%; border: 3px solid #111; position: relative; }
+.bola::before, .bola::after { content: ""; position: absolute; top: 30%; width: 26%; height: 30%; background: #fff; border: 2px solid #111; border-radius: 50%; }
+.bola::before { left: 18%; } .bola::after { right: 18%; }
+
+.botones { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none;
+  background: var(--acento); color: #fff; border: 2px solid var(--acento);
+}
+.btn.claro { background: transparent; color: var(--acento); }
+.btn:hover { filter: brightness(1.08); }
+
+.rejilla { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.tarjeta {
+  background: var(--fondo-2); border: 1px solid var(--borde); border-radius: var(--radio);
+  box-shadow: var(--sombra); overflow: hidden; display: flex; flex-direction: column;
+}
+.tarjeta .cuerpo { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.tarjeta .cuerpo p { margin: 0; color: var(--suave); }
+.tarjeta .pie { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 10px; }
+.tarjeta .banner { aspect-ratio: 1024 / 500; object-fit: cover; width: 100%; background: var(--borde); }
+.tarjeta .pie a { font-weight: 700; font-size: .92rem; text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--borde); color: var(--texto); }
+.tarjeta .pie a:hover { border-color: var(--acento); color: var(--acento); }
+
+.etiqueta { display: inline-block; font-size: .78rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--fondo); border: 1px solid var(--borde); color: var(--suave); }
+.etiqueta.ok { color: #138a5b; border-color: #138a5b55; }
+.etiqueta.pronto { color: #b06a00; border-color: #b06a0055; }
+code, .paquete { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; background: var(--fondo); border: 1px solid var(--borde); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+
+.ficha { display: flex; gap: 16px; align-items: center; }
+.ficha img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+
+.aviso { border-left: 4px solid var(--colectucus); background: var(--fondo-2); padding: 14px 16px; border-radius: 0 12px 12px 0; margin: 1em 0; }
+.aviso.morado { border-color: var(--acento); }
+
+/* ---- Tablas ---- */
+.tabla { overflow-x: auto; margin: 1em 0; border: 1px solid var(--borde); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+th { background: var(--fondo); font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+
+/* ---- Wiki ---- */
+.wiki { display: grid; grid-template-columns: 230px 1fr; gap: 32px; align-items: start; padding-top: 24px; }
+.indice { position: sticky; top: 76px; font-size: .92rem; background: var(--fondo-2); border: 1px solid var(--borde); border-radius: 14px; padding: 14px; max-height: calc(100vh - 100px); overflow: auto; }
+.indice strong { display: block; margin-bottom: 6px; }
+.indice ol { margin: 0; padding-left: 18px; }
+.indice a { color: var(--suave); text-decoration: none; }
+.indice a:hover { color: var(--acento); }
+.articulo { min-width: 0; }
+.articulo h2 { border-bottom: 2px solid var(--borde); padding-bottom: 6px; }
+.infobox { float: right; width: 280px; margin: 0 0 16px 20px; background: var(--fondo-2); border: 1px solid var(--borde); border-radius: 14px; overflow: hidden; font-size: .9rem; }
+.infobox img { width: 100%; }
+.infobox h4 { margin: 0; padding: 10px 12px; background: var(--fondo); }
+.infobox dl { margin: 0; padding: 8px 12px; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; }
+.infobox dt { font-weight: 700; color: var(--suave); }
+.infobox dd { margin: 0; }
+.personajes { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin: 1em 0; }
+.personaje { background: var(--fondo-2); border: 1px solid var(--borde); border-radius: 14px; padding: 14px; }
+.personaje h4 { margin: 0 0 2px; display: flex; align-items: center; gap: 8px; }
+.personaje .rol { font-size: .8rem; color: var(--suave); font-weight: 700; margin-bottom: 6px; }
+.personaje p { margin: 0; font-size: .93rem; }
+.punto { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #111; flex: none; }
+blockquote { margin: 1em 0; padding: 10px 16px; border-left: 4px solid var(--acento); background: var(--fondo-2); border-radius: 0 12px 12px 0; font-style: italic; }
+.spoiler { background: #fff3d6; color: #6b4a00; border: 1px solid #f0d28a; padding: 10px 14px; border-radius: 12px; font-size: .92rem; }
+@media (prefers-color-scheme: dark) { .spoiler { background: #3a2d10; color: #f5d993; border-color: #5d4920; } }
+
+/* ---- Política ---- */
+.politica h2 { font-size: 1.3rem; }
+.politica ul { padding-left: 1.2em; }
+.politica li { margin-bottom: .5em; }
+.idiomas { display: flex; gap: 8px; margin: 1em 0; }
+
+footer { border-top: 1px solid var(--borde); margin-top: 40px; padding: 24px 0 40px; color: var(--suave); font-size: .9rem; }
+footer .contenedor { display: flex; gap: 16px 32px; flex-wrap: wrap; justify-content: space-between; }
+footer a { color: var(--suave); }
+
+@media (max-width: 820px) {
+  .wiki { grid-template-columns: 1fr; gap: 16px; }
+  .indice { position: static; max-height: none; }
+  .infobox { float: none; width: 100%; margin: 0 0 16px; }
+}
+@media (max-width: 560px) {
+  .barra { position: static; }
+  .barra nav { margin-left: 0; width: 100%; }
+  body { font-size: 16px; }
+}

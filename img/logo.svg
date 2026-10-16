@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MaJo Associations">
+  <defs><clipPath id="c"><circle cx="32" cy="34" r="26"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect x="0" y="0" width="32" height="64" fill="#4fa8dc"/>
+    <rect x="32" y="0" width="32" height="64" fill="#2b2b2b"/>
+    <circle cx="20" cy="46" r="7" fill="#72c2a8"/>
+  </g>
+  <circle cx="32" cy="34" r="26" fill="none" stroke="#111" stroke-width="3"/>
+  <path d="M14 12 L18 4 L24 10 L30 3 L33 12 Z" fill="#232a8e" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+  <ellipse cx="22" cy="30" rx="6" ry="7.5" fill="#fff" stroke="#111" stroke-width="2.5"/>
+  <ellipse cx="42" cy="30" rx="6" ry="7.5" fill="#fff" stroke="#111" stroke-width="2.5"/>
+</svg>
