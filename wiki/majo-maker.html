@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MaJo Maker · Wiki</title>
+<meta name="description" content="Wiki de MaJo Maker: el editor de niveles de Chulin's Adventure, Joshua 2D y Pancho. Herramientas, activadores, equivalencias, compartir niveles y versión para PC.">
+<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Montserrat:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <div class="dentro">
+    <a class="marca" href="../"><img class="logo" src="../img/logo.svg" alt=""><span class="nombre"><b>MaJo</b> Wiki</span></a>
+    <nav>
+      <a href="./">Inicio de la Wiki</a>
+      <a href="chulins-adventure.html">Chulin's Adventure</a>
+      <a href="joshua-2d.html">Joshua 2D</a>
+      <a href="pancho.html">Pancho</a>
+      <a href="majo-maker.html" aria-current="page">MaJo Maker</a>
+      <a href="colectucus.html">Colectucus</a>
+      <a href="majo-associations.html">MaJo Associations</a>
+    </nav>
+  </div>
+</header>
+
+<main class="contenedor wiki">
+  <aside class="indice">
+    <strong>Contenido</strong>
+    <ol>
+      <li><a href="#resumen">Resumen</a></li>
+      <li><a href="#crear">Qué se puede crear</a></li>
+      <li><a href="#activadores">Activadores</a></li>
+      <li><a href="#equivalencias">Cambiar un nivel de juego</a></li>
+      <li><a href="#herramientas">Herramientas del editor</a></li>
+      <li><a href="#compartir">Mis niveles y compartir</a></li>
+      <li><a href="#ejemplos">Niveles de ejemplo</a></li>
+      <li><a href="#pc">Versión para PC</a></li>
+      <li><a href="#curiosidades">Curiosidades</a></li>
+      <li><a href="#creditos">Créditos y versiones</a></li>
+    </ol>
+  </aside>
+
+  <article class="articulo">
+    <h1>MaJo Maker</h1>
+
+    <aside class="infobox">
+      <img src="../img/majo-maker-banner.png" alt="MaJo Maker">
+      <h4>Ficha</h4>
+      <dl>
+        <dt>Tipo</dt><dd>Editor de niveles</dd>
+        <dt>Juegos</dt><dd>Chulin's Adventure, Joshua 2D y Pancho</dd>
+        <dt>Estudios</dt><dd>Sulu Entertainment y Brane Virtuals</dd>
+        <dt>Grupo</dt><dd>MaJo Associations</dd>
+        <dt>Creación</dt><dd>Friveq</dd>
+        <dt>Versión</dt><dd>1.0.3</dd>
+        <dt>Paquete</dt><dd><code>com.majomaker.majo</code></dd>
+        <dt>Plataformas</dt><dd>Android (7.0 o superior) y PC (navegador)</dd>
+        <dt>Idiomas</dt><dd>13</dd>
+      </dl>
+    </aside>
+
+    <section id="resumen">
+      <p><strong>MaJo Maker</strong> es el editor de niveles de los juegos de <a href="majo-associations.html">MaJo Associations</a>, al estilo de Mario Maker. Con él se pueden crear niveles de <a href="chulins-adventure.html">Chulin's Adventure</a>, <a href="joshua-2d.html">Joshua 2D</a> y <a href="pancho.html">Pancho</a>.</p>
+      <p>Cada nivel se juega con el <strong>motor, el arte, la música y los diálogos reales</strong> de su juego, así que se siente igual que el juego original. La única diferencia es que en el Maker <strong>no hay jefes</strong>.</p>
+      <p>No tiene anuncios ni compras, no pide cuentas y funciona sin internet.</p>
+    </section>
+
+    <section id="crear">
+      <h2>Qué se puede crear</h2>
+      <ul>
+        <li><strong>Bloques de cada juego:</strong> suelo, ladrillos, plataformas, pinchos, lava, agua, puertas con llave, hielo, suelo agrietado, mostaza que rebota, cintas, parrilla, bloques UV, bloques que aparecen y desaparecen, vacío...</li>
+        <li><strong>Enemigos</strong> de cada juego (Secuaces, huevos, utensilios...), trampas, plataformas móviles, portales y decoración.</li>
+        <li><strong>Objetos:</strong> monedas, vidas, llaves, armas y herramientas de Joshua, poderes del Foogame, fogatas, oasis...</li>
+        <li><strong>Personajes (NPCs) con diálogos propios:</strong> en cada línea se elige quién habla (el NPC, el héroe, el narrador u otro personaje) y qué cara pone. Pueden tener nombre propio, hablar solos o al tocarlos, y estar enjaulados.</li>
+        <li><strong>Carteles</strong>, <strong>zonas de diálogo</strong> (al pasar por ahí empieza una conversación) y <strong>mensajes secretos UV</strong>.</li>
+        <li>Un diálogo al empezar y otro al llegar a la meta.</li>
+        <li><strong>Ajustes del nivel:</strong> nombre, creador, juego, escenario, música, héroe, compañero, tamaño y las reglas de cada juego (tiempo y armas en Chulin; armas, herramienta, núcleos y clima en Joshua; poder inicial y sed en Pancho).</li>
+      </ul>
+    </section>
+
+    <section id="activadores">
+      <h2>Activadores</h2>
+      <p>Los <strong>activadores</strong> (pestaña 🚩 Especial, botón ⚡) son zonas invisibles al jugar. Al cruzarlas del lado A al lado B cambian cosas del nivel:</p>
+      <ul>
+        <li>la música (o el silencio),</li>
+        <li>el escenario,</li>
+        <li>el personaje jugable y el compañero,</li>
+        <li>el poder o el arma,</li>
+        <li>el clima (frío o sed),</li>
+        <li>o hacen que el héroe se cure, empiece un diálogo o aparezca un mensaje.</li>
+      </ul>
+      <p>Se elige hacia dónde se cruzan (derecha, izquierda, abajo o arriba) y su tamaño. Con <strong>"Se deshace al volver"</strong> encendido, al cruzar de B a A todo vuelve a como estaba (también al morir y reaparecer antes del activador); apagado, el cambio se queda para siempre. Curar, los diálogos y los mensajes pasan solo la primera vez.</p>
+      <p>Varios activadores se combinan bien: cada cosa toma el valor del último activador que la cambió, o el del nivel si ninguno la cambia.</p>
+    </section>
+
+    <section id="equivalencias">
+      <h2>Cambiar un nivel de juego</h2>
+      <p>Un nivel se puede pasar de un juego a otro en cualquier momento. Al hacerlo se pone el escenario por defecto del juego nuevo, y lo que no existe ahí se ve y se juega con su <strong>equivalente</strong> (marcado con ⇄ en el editor). Por ejemplo, la nieve de Joshua es el cielo en Chulin y las salinas en Pancho.</p>
+      <p>El nivel guarda lo que puso el creador, así que al volver al juego original todo vuelve a ser como antes.</p>
+    </section>
+
+    <section id="herramientas">
+      <h2>Herramientas del editor</h2>
+      <div class="tabla"><table>
+        <tr><th>Herramienta</th><th>Qué hace</th></tr>
+        <tr><td>✏️ Poner</td><td>Toca para poner lo elegido en la paleta. Arrastra para pintar bloques, dibujar monedas o mover algo.</td></tr>
+        <tr><td>⬛ Rellenar</td><td>Arrastra para llenar un rectángulo con el bloque elegido.</td></tr>
+        <tr><td>🧽 Borrar</td><td>Toca o arrastra para quitar bloques y cosas.</td></tr>
+        <tr><td>👆 Elegir</td><td>Toca algo para ver sus opciones o arrástralo para moverlo.</td></tr>
+        <tr><td>✋ Mover la vista</td><td>Arrastra para recorrer el nivel.</td></tr>
+      </table></div>
+      <ul>
+        <li>Con <strong>dos dedos</strong> se mueve la vista y se hace zoom.</li>
+        <li><strong>Mantener apretado</strong> sobre algo abre sus opciones.</li>
+        <li>El nivel se puede <strong>probar</strong> desde el inicio o desde donde se está mirando, con pausa y vuelta al editor.</li>
+      </ul>
+    </section>
+
+    <section id="compartir">
+      <h2>Mis niveles y compartir</h2>
+      <ul>
+        <li><strong>Mis niveles:</strong> se guardan solos en el celular; se pueden jugar, editar, duplicar y borrar.</li>
+        <li><strong>Compartir:</strong> cada nivel se convierte en un código que empieza con <code>MJM2:</code> y se manda por WhatsApp u otra app.</li>
+        <li><strong>Pegar código:</strong> para jugar el nivel de un amigo. En Android, si alguien comparte un código con MaJo Maker, el nivel se agrega solo a "Mis niveles".</li>
+      </ul>
+    </section>
+
+    <section id="ejemplos">
+      <h2>Niveles de ejemplo</h2>
+      <p>El Maker trae un nivel de ejemplo de cada juego, para jugarlo o editar una copia y ver cómo está hecho:</p>
+      <div class="tabla"><table>
+        <tr><th>Nivel</th><th>Juego</th></tr>
+        <tr><td>La aldea de Chulin</td><td><a href="chulins-adventure.html">Chulin's Adventure</a></td></tr>
+        <tr><td>Huevos en la nieve</td><td><a href="joshua-2d.html">Joshua 2D</a></td></tr>
+        <tr><td>Turno de noche en McChulin's</td><td><a href="pancho.html">Pancho</a></td></tr>
+      </table></div>
+    </section>
+
+    <section id="pc">
+      <h2>Versión para PC</h2>
+      <p>Desde la versión 1.0.3, MaJo Maker también funciona en la computadora: es <strong>un solo archivo</strong> que se abre con doble clic en Chrome, Edge o Firefox, sin internet y sin instalar nada. Trae adentro el Maker, los tres juegos y los 13 idiomas. Los niveles se guardan en el navegador.</p>
+      <ul>
+        <li><strong>Controles cambiables</strong> (Opciones → Controles): al jugar, cada acción tiene 2 teclas y 2 botones del mando. Unos puntos de color dicen en qué juego se usa cada acción (azul Chulin, morado Joshua, naranja Pancho).</li>
+        <li><strong>Atajos del editor:</strong> teclas 1 a 5 para las herramientas, flechas o WASD para mover la vista, T para probar el nivel, Ctrl+Z / Ctrl+Y para deshacer y rehacer, y Ctrl+S para guardar.</li>
+        <li><strong>Mouse:</strong> en el editor, la rueda hace zoom y el clic derecho mueve la vista. Al jugar, el clic izquierdo dispara hacia el puntero (en Pancho usa el poder) y el derecho da un golpe.</li>
+        <li><strong>Mando:</strong> funciona solo al conectarlo, tanto al jugar como en los menús.</li>
+        <li><strong>Archivos de nivel:</strong> los niveles se pueden guardar como archivo <code>.majo.txt</code>, abrirlos o arrastrarlos a la ventana.</li>
+        <li><strong>Pantalla completa</strong> con el botón ⛶ o F11.</li>
+      </ul>
+    </section>
+
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>Los tres juegos usan los mismos nombres internos, así que el Maker "envuelve" cada uno por separado para que convivan en la misma pantalla sin chocar.</li>
+        <li>El Maker nunca toca el progreso real de los juegos: las partidas del Maker se guardan aparte.</li>
+        <li>Es el único proyecto de MaJo Associations firmado por los dos estudios a la vez, Sulu Entertainment y Brane Virtuals.</li>
+      </ul>
+    </section>
+
+    <section id="creditos">
+      <h2>Créditos y versiones</h2>
+      <p><strong>Créditos:</strong> Friveq · Sulu Entertainment y Brane Virtuals (MaJo Associations) · Mr. Chulin (personaje Chulin) · Claude.</p>
+      <div class="tabla"><table>
+        <tr><th>Versión</th><th>Cambios</th></tr>
+        <tr><td>1.0.0</td><td>Lanzamiento: editor de niveles de los tres juegos, NPCs con diálogos, equivalencias y códigos para compartir.</td></tr>
+        <tr><td>1.0.1</td><td>Activadores: zonas invisibles que cambian el nivel al cruzarlas.</td></tr>
+        <tr><td>1.0.2</td><td>Requiere Android 7.0 o superior (lo pide la protección automática de Google Play).</td></tr>
+        <tr><td>1.0.3</td><td>Versión para PC en un solo archivo, con controles cambiables, mouse y mando.</td></tr>
+      </table></div>
+      <p><a href="../privacidad/majo-maker.html">Política de privacidad</a></p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <div>MaJo Wiki · © 2026 MaJo Associations</div>
+    <div><a href="../">Inicio</a> · <a href="./">Wiki</a></div>
+  </div>
+</footer>
+</body>
+</html>

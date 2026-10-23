@@ -7,7 +7,9 @@ Página estática (HTML + CSS, sin compilar), lista para GitHub Pages.
 |---|---|
 | Inicio: juegos, Colectucus, MaJo Associations y privacidad | `index.html` |
 | Políticas de privacidad (para Google Play) | `privacidad/*.html` |
-| Wiki | `wiki/index.html`, `wiki/chulins-adventure.html`, `wiki/joshua-2d.html`, `wiki/pancho.html`, `wiki/majo-associations.html` |
+| Wiki | `wiki/index.html`, `wiki/chulins-adventure.html`, `wiki/joshua-2d.html`, `wiki/pancho.html`, `wiki/majo-maker.html`, `wiki/colectucus.html`, `wiki/majo-associations.html` |
+| Íconos de los logros (de los juegos) | `img/logros/<juego>/` |
+| Verificación de Google (Search Console) | `google2c00ac82537642a6.html` (no borrar) |
 | Estilo compartido | `css/estilo.css` |
 | Logo, íconos y gráficos de la tienda | `img/` |
 
