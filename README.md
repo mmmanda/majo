@@ -30,3 +30,15 @@ Página estática (HTML + CSS, sin compilar), lista para GitHub Pages.
    - `https://mmmanda.github.io/majo/privacidad/joshua-2d.html`
    - `https://mmmanda.github.io/majo/privacidad/pancho.html`
    - `https://mmmanda.github.io/majo/privacidad/majo-maker.html`
+
+## Copia en el servidor (Hetzner) con los juegos jugables
+
+Desde el 2026-11-09 esta rama (`claude/wiki-hetzner`) se sirve también desde el servidor, **por ahora con la IP**:
+
+- Inicio: `https://135.181.107.239/majo/` · Wiki: `https://135.181.107.239/majo/wiki/`
+- Juegos para jugar en el navegador (también en el celular), con el botón **«▶ Jugar en la web»** de cada artículo:
+  `https://135.181.107.239/majo/jugar/<juego>/` con `chulins-adventure`, `joshua-2d`, `pancho`, `jary` y `majo-maker` (MaJo Maker es exclusivo de la web).
+- Los juegos **no se copian a este repo**: el servidor los toma de sus ramas del repo privado `mmmanda/Juegos` y arma todo junto con `herramientas/publicar.sh` (`--traer` hace `git pull` antes). `jugar/pantalla.js` pone pantalla completa y horizontal al primer toque en el celular.
+- Cada juego guarda en su propia clave de `localStorage` (`chulins_adventure_v1`, `joshua2d_v1`, `pancho_v1`, `jary_ciudad_muerta_v1`, `majo_maker_v1`).
+- GitHub Pages (`mmmanda.github.io/majo`, rama `claude/majo-associations-page-wiki-d7mf2u`) sigue igual: ahí están las políticas de privacidad que usa Play Console y la verificación de Google.
+- Pruebas: `node herramientas/prueba-web.js` (cada juego carga, entra a un nivel y se mueve, como un celular).

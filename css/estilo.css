@@ -177,3 +177,8 @@ footer a { color: var(--suave); }
 .logro span { font-size: .85rem; color: var(--suave); line-height: 1.35; }
 .logro em { font-style: normal; font-weight: 700; font-size: .8rem; color: var(--acento); background: var(--fondo); border-radius: 999px; padding: 2px 8px; flex: none; }
 .logro.secreto { border-style: dashed; }
+
+/* Botón «Jugar en la web» de la wiki */
+.jugar-web { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 6px 0 18px; }
+.jugar-web span { font-size: .9rem; color: var(--suave); }
+.pie .jugar { font-weight: 700; }
