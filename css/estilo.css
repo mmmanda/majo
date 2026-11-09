@@ -182,3 +182,7 @@ footer a { color: var(--suave); }
 .jugar-web { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 6px 0 18px; }
 .jugar-web span { font-size: .9rem; color: var(--suave); }
 .pie .jugar { font-weight: 700; }
+
+/* rótulo «Juegos extra» del menú de la wiki */
+nav a.extra { font-weight: 700; opacity: .8; }
+#extra h2 { margin-top: 26px; }

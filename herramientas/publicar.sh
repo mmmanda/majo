@@ -9,12 +9,15 @@
 #   pancho/     Juegos, rama ccr-dd9e4f9e-6wlhop  -> pancho/web
 #   jary/       Juegos, rama ccr-2215454e-jwei9k  -> juego
 #   majomaker/  Juegos, rama ccr-a7eeaab2-6k86nu  -> majo-maker/web
-# Object Khaos (rama claude/new-session-351pqh) NO se publica ni se toca: solo tiene artículo en la wiki.
+#   novela/     Juegos, rama claude/novela-visual  -> novela/web (El Último Timbre)
+#   ok/         Juegos, rama claude/new-session-351pqh, SOLO LECTURA: armar-ok.sh compila su web en ok-dist/
+# Object Khaos: se publica y se lee, pero NUNCA se modifica su código ni se commitea en su rama.
+# Su versión web sale de ok-dist con ok-web.js inyectado (sin multijugador ni pedidos a Firebase).
 set -euo pipefail
 cd /home/bondisar/juegos
 exec 9>.publicar.candado; flock 9
 if [ "${1:-}" = "--traer" ]; then
-  for d in majo chulin joshua pancho jary majomaker; do (cd $d && git pull -q --ff-only) || echo "No se pudo traer $d (sigue con lo que hay)"; done
+  for d in majo chulin joshua pancho jary majomaker novela; do (cd $d && git pull -q --ff-only) || echo "No se pudo traer $d (sigue con lo que hay)"; done
 fi
 N=publico.nuevo
 rm -rf "$N"; mkdir -p "$N/jugar"
@@ -25,6 +28,14 @@ copiar joshua/joshua-2d/web joshua-2d
 copiar pancho/pancho/web pancho
 copiar jary/juego jary
 copiar majomaker/majo-maker/web majo-maker
+copiar novela/novela/web el-ultimo-timbre
+# Object Khaos: se compila solo si cambió su rama (con --traer, la trae antes)
+bash majo/herramientas/armar-ok.sh $( [ "${1:-}" = "--traer" ] && echo --traer ) || echo "No se pudo armar Object Khaos (se publica la versión anterior si existe)"
+if [ -d ok-dist ]; then
+  rsync -a --delete --exclude .commit ok-dist/ "$N/jugar/object-khaos/"
+  cp majo/herramientas/ok-web.js "$N/jugar/object-khaos/web-solo.js"
+  sed -i "s#<script type=\"module\"#<script src=\"./web-solo.js\"></script>\n    <script type=\"module\"#" "$N/jugar/object-khaos/index.html"
+fi
 # en el celular: pantalla completa y horizontal al primer toque (jugar/pantalla.js viene del repo majo; este script está en majo/herramientas)
 for f in "$N"/jugar/*/index.html; do
   grep -q 'pantalla.js' "$f" || sed -i 's#</body>#<script src="../pantalla.js"></script>\n</body>#' "$f"
