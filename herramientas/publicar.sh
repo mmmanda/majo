@@ -9,7 +9,7 @@
 #   pancho/     Juegos, rama ccr-dd9e4f9e-6wlhop  -> pancho/web
 #   jary/       Juegos, rama ccr-2215454e-jwei9k  -> juego
 #   majomaker/  Juegos, rama ccr-a7eeaab2-6k86nu  -> majo-maker/web
-# Object Khaos (rama claude/new-session-351pqh) NO se publica ni se toca.
+# Object Khaos (rama claude/new-session-351pqh) NO se publica ni se toca: solo tiene artículo en la wiki.
 set -euo pipefail
 cd /home/bondisar/juegos
 exec 9>.publicar.candado; flock 9
@@ -29,6 +29,9 @@ copiar majomaker/majo-maker/web majo-maker
 for f in "$N"/jugar/*/index.html; do
   grep -q 'pantalla.js' "$f" || sed -i 's#</body>#<script src="../pantalla.js"></script>\n</body>#' "$f"
 done
+# Pancho en la web: sin multijugador (window.WEB_BUILD lo esconde; el servidor pancho-red queda para Android)
+f="$N/jugar/pancho/index.html"
+grep -q WEB_BUILD "$f" || sed -i "0,/<script src=/s##<script>window.WEB_BUILD = true;</script>\n<script src=#" "$f"
 chmod -R go+rX "$N"
 rm -rf publico.viejo
 [ -d publico ] && mv publico publico.viejo
