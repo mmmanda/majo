@@ -19,16 +19,17 @@ cuerpo = '''<main class="contenedor">
     <div id="cerrada" class="tarjeta"><div class="cuerpo">
       <p>La guía está bloqueada. Para abrirla, responde:</p>
       <p><b>¿Cuál fue el primer juego de Manda en Julian's Editor?</b></p>
-      <form id="fGuia" autocomplete="off"><input id="rGuia" type="text" aria-label="Respuesta" style="font:inherit;padding:8px 10px;border:2px solid #222;border-radius:10px;width:min(360px,100%)"> <button class="btn" type="submit">Abrir la guía</button></form>
+      <form id="fGuia" autocomplete="off"><input id="rGuia" type="text" aria-label="Respuesta" style="font:inherit;padding:8px 10px;border:2px solid var(--borde);border-radius:10px;width:min(360px,100%)"> <button class="btn" type="submit">Abrir la guía</button></form>
       <p id="mGuia" role="status" style="min-height:1.4em;font-weight:700"></p>
     </div></div>
     <div id="abierta" hidden></div>
   </article>
 </main>
 <style>
-#abierta h2{margin-top:28px} #abierta .final{border:2px solid #222;border-radius:14px;padding:10px 14px;margin:12px 0;background:#fff}
+#abierta h2{margin-top:28px} #abierta .final{border:2px solid var(--borde);border-radius:14px;padding:10px 14px;margin:12px 0;background:var(--fondo-2);color:var(--texto)}
+#abierta{color:var(--texto)} #abierta a{color:var(--acento)} #rGuia{background:var(--fondo-2);color:var(--texto)}
 #abierta .final h3{margin:0 0 6px} #abierta .pasos{margin:6px 0;padding-left:22px} #abierta details summary{cursor:pointer;font-weight:700}
-#abierta .etq{font-size:.75em;border:2px solid #222;border-radius:999px;padding:1px 8px;margin-left:6px}
+#abierta .etq{font-size:.75em;border:2px solid var(--borde);border-radius:999px;padding:1px 8px;margin-left:6px}
 </style>
 <script>
 (function () {
