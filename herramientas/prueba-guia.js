@@ -10,7 +10,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   let mal = 0; const log = (ok, t) => { if (!ok) mal++; console.log((ok ? 'OK  ' : 'MAL ') + t); };
   const prob = async (ctx, r) => { const p = await ctx.newPage(); await p.goto(URL); await sleep(300); await p.fill('#rGuia', r); await p.click('#fGuia button'); await sleep(2500);
     const st = await p.evaluate(() => ({ abierta: !document.getElementById('abierta').hidden, msg: document.getElementById('mGuia').textContent, finales: document.querySelectorAll('#abierta .final').length })); return [p, st]; };
-  for (const r of ['Sammy y el huevo', 'Joshua 2D', '']) { const ctx = await b.newContext(); const [, st] = await prob(ctx, r); log(!st.abierta && st.msg === 'Respuesta incorrecta', `incorrecta «${r}»: no abre (${st.msg})`); await ctx.close(); }
+  for (const r of ['Pancho', 'Joshua 2D', '']) { const ctx = await b.newContext(); const [, st] = await prob(ctx, r); log(!st.abierta && st.msg === 'Respuesta incorrecta', `incorrecta «${r}»: no abre (${st.msg})`); await ctx.close(); }
   for (const r of buenas) { const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true }); const [p, st] = await prob(ctx, r); log(st.abierta && st.finales === 35, `variante correcta (${r.length} letras): abre con ${st.finales} finales`);
     await p.reload(); await sleep(1500); const rec = await p.evaluate(() => !document.getElementById('abierta').hidden); log(rec, 'se recuerda al recargar'); await p.screenshot({ path: '/home/bondisar/tmp/juegos-capturas/guia-abierta.png' }); await ctx.close(); }
   // la respuesta no aparece en la página ni en sus scripts
