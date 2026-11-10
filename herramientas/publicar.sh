@@ -29,6 +29,8 @@ copiar pancho/pancho/web pancho
 copiar jary/juego jary
 copiar majomaker/majo-maker/web majo-maker
 copiar novela/novela/web el-ultimo-timbre
+# versión en los archivos de la novela: el navegador no usa copias viejas (JS, CSS y sprites)
+sed -i "s/__V__/$(date +%s)/g" "$N/jugar/el-ultimo-timbre/index.html"
 # Object Khaos: se compila solo si cambió su rama (con --traer, la trae antes)
 bash majo/herramientas/armar-ok.sh $( [ "${1:-}" = "--traer" ] && echo --traer ) || echo "No se pudo armar Object Khaos (se publica la versión anterior si existe)"
 if [ -d ok-dist ]; then
