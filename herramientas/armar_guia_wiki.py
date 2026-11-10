@@ -10,12 +10,12 @@ d = json.load(open(sys.argv[1]))
 base = rd(os.path.join(W, 'el-ultimo-timbre.html'))
 cab, pie = base[:base.index('<main')], base[base.index('</main>') + len('</main>'):]
 cab = re.sub(r'<title>[^<]*</title>', '<title>Guía avanzada de El Último Timbre · Wiki</title>', cab)
-cab = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Guía avanzada para conseguir los 35 finales de El Último Timbre. Se desbloquea respondiendo una pregunta.">', cab)
+cab = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="Guía avanzada para conseguir los 36 finales de El Último Timbre. Se desbloquea respondiendo una pregunta.">', cab)
 cab = cab.replace(' aria-current="page"', '')
 cuerpo = '''<main class="contenedor">
   <article class="articulo" style="max-width:900px;margin:0 auto">
     <p><a href="el-ultimo-timbre.html">← El Último Timbre</a></p>
-    <h1>Guía avanzada: los 35 finales</h1>
+    <h1>Guía avanzada: los 36 finales</h1>
     <div id="cerrada" class="tarjeta"><div class="cuerpo">
       <p>La guía está bloqueada. Para abrirla, responde:</p>
       <p><b>¿Cuál fue el primer juego de Manda en Julian's Editor?</b></p>
@@ -69,7 +69,7 @@ wr(os.path.join(W, 'el-ultimo-timbre-guia.html'), cab + cuerpo + pie)
 s = rd(os.path.join(W, 'el-ultimo-timbre.html'))
 if 'el-ultimo-timbre-guia.html' not in s:
     s = s.replace('<section id="finales">\n      <h2>Los 20 finales</h2>', '<section id="finales">\n      <h2>Los 20 finales</h2>')
-    s = re.sub(r'(<section id="finales">\s*<h2>[^<]*</h2>)', r'\1\n      <p><a class="btn" href="el-ultimo-timbre-guia.html">📘 Guía avanzada de los 35 finales</a> <small>(se abre respondiendo una pregunta)</small></p>', s, count=1)
+    s = re.sub(r'(<section id="finales">\s*<h2>[^<]*</h2>)', r'\1\n      <p><a class="btn" href="el-ultimo-timbre-guia.html">📘 Guía avanzada de los 36 finales</a> <small>(se abre respondiendo una pregunta)</small></p>', s, count=1)
     wr(os.path.join(W, 'el-ultimo-timbre.html'), s)
 s = rd(os.path.join(W, 'index.html'))
 if 'el-ultimo-timbre-guia.html' not in s:

@@ -10,7 +10,7 @@ def wr(p, s): open(p, 'w', encoding='utf-8').write(s)
 
 EXTRA = [  # (artículo, carpeta en jugar/, título, banner, texto)
     ('el-ultimo-timbre', 'el-ultimo-timbre', 'El Último Timbre', 'el-ultimo-timbre-banner.png',
-     'Novela visual en la Academia MaJo: personajes de todos los juegos, muchísimas decisiones, un juicio de clase y 35 finales.'),
+     'Novela visual en la Academia MaJo: personajes de todos los juegos, muchísimas decisiones, un juicio de clase y 36 finales.'),
     ('object-khaos', 'object-khaos', 'Object Khaos', 'object-khaos-banner.png',
      '¡El concurso de los objetos! Señor Pantalla, Isla Escenario y 20 minijuegos. En la web se juega sin conexión, contra bots.'),
     ('jary', 'jary', 'JARY: Ciudad Muerta', 'jary-banner.png',
